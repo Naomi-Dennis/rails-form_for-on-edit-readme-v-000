@@ -821,3 +821,19 @@ Processing by PostsController#update as HTML
   [1m[36m (28.1ms)[0m  [1mcommit transaction[0m
 Redirected to http://192.241.157.192:60864/posts/1
 Completed 302 Found in 36ms (ActiveRecord: 28.7ms)
+
+
+Started GET "/posts/1" for 148.75.220.188 at 2018-04-01 22:47:20 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 49ms (Views: 46.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1" for 148.75.220.188 at 2018-04-01 22:47:26 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.2ms)
